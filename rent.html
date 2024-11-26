@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Properties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping to the next row */
+            justify-content: center; /* Centers the items */
+            gap: 20px; /* Adds space between items */
+        }
+        .property {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            width: 45%; /* Each property takes 45% of the row */
+            text-align: left;
+        }
+        .property img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+        .property-content {
+            padding: 10px;
+        }
+        .property-content h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .property-content p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rent Properties</h1>
+    <div class="container">
+        <!-- Property 1 -->
+        <div class="property">
+            <img src="rent1.jpg" alt="2-BHK Flat">
+            <div class="property-content">
+                <h3>2-BHK Flat in Mumbai</h3>
+                <p>Fully furnished flat near Andheri with amenities like gym and pool.</p>
+            </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="property">
+            <img src="rent2.jpg" alt="Luxury Villa">
+            <div class="property-content">
+                <h3>Luxury Villa in Bangalore</h3>
+                <p>Villa with private garden, swimming pool, and high-end interiors.</p>
+            </div>
+        </div>
+
+        <!-- Property 3 -->
+        <div class="property">
+            <img src="rent3.jpg" alt="Modern Apartment">
+            <div class="property-content">
+                <h3>Modern Apartment in Delhi</h3>
+                <p>Stylish 1-BHK apartment in Connaught Place with modern interiors.</p>
+            </div>
+        </div>
+
+        <!-- Property 4 -->
+        <div class="property">
+            <img src="rent4.jpg" alt="Beachfront Villa">
+            <div class="property-content">
+                <h3>Beachfront Villa in Goa</h3>
+                <p>Stunning 3-BHK villa with a private beach for ultimate luxury.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
