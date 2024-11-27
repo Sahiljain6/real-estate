@@ -12,18 +12,16 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
-            background-image: url('login1.jpg');
+            background-image: url('login1.jpg'); /* Ensure the file path is correct */
             background-size: cover;
             background-position: center;
         }
         .login-container {
             text-align: center;
             padding: 20px;
-            background:  rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
             border-radius: 10px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
         }
         input, button {
             width: 95%;
@@ -45,50 +43,53 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1> 
+        <h1>Register</h1> 
         <form name="myform" onsubmit="return validation()">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br>
 
-    <label for="confirm_password">Re-enter Password:</label>
-    <input type="password" id="confirm_password" name="confirm_password"><br><br>
+            <label for="confirm_password">Re-enter Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password"><br>
 
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age"><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br>
 
-    <button type="submit">Register</button>
-  </form>
+            <button type="submit">Register</button>
+        </form>
+    </div>
 
-  <script>
-    function validation() {
-      var name = document.myform.name.value;
-      var password = document.myform.password.value;
-      var confirm_password = document.myform.confirm_password.value;
-      var age = document.myform.age.value;
+    <script>
+        function validation() {
+            var name = document.myform.name.value;
+            var password = document.myform.password.value;
+            var confirm_password = document.myform.confirm_password.value;
+            var age = document.myform.age.value;
 
-      
-      if (name == null || name == "") {
-        alert("Name can't be blank");
-        return false;
-      }
+            if (name === "") {
+                alert("Name can't be blank");
+                return false;
+            }
 
-      
-      if (password.length < 6) {
-        alert("Password must be at least 6 characters long.");
-        return false;
-      }
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
 
-      
-      if (age < 16 || age>60  ) {
-        alert("Age should be more than 16 AND should be less than 60.");{
-Text="Input is valid"
- }
-      }    
-    }
-  </script>
+            if (password !== confirm_password) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            if (age < 16 || age > 60) {
+                alert("Age should be more than 16 AND less than 60.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
-
