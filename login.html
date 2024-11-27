@@ -41,22 +41,54 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
-        <form onsubmit="return validateForm()">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button type="submit">Login</button>
-        </form>
-    </div>
+        <h1>Login</h1> 
+        <form name="myform" onsubmit="return validation()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
 
-    <script>
-        function validateForm() {
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value.trim();
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
 
-          
-        }
-    </script>
+    <label for="confirm_password">Re-enter Password:</label>
+    <input type="password" id="confirm_password" name="confirm_password"><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age"><br><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    function validation() {
+      var name = document.myform.name.value;
+      var password = document.myform.password.value;
+      var confirm_password = document.myform.confirm_password.value;
+      var age = document.myform.age.value;
+
+      
+      if (name == null || name == "") {
+        alert("Name can't be blank");
+        return false;
+      }
+
+      
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      
+      if (age < 16 || age>60  ) {
+        alert("Age should be more than 16 AND should be less than 60.");{
+Text="Input is valid"
+ }
+      }       
+    }
+  </script>
 </body>
+        
+          
+        
+
 </html>
 
