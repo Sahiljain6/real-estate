@@ -12,7 +12,6 @@
             background-image: url('background1.jpg');
         }
         h1 {
-       
             color: white;
             padding: 10px;
         }
@@ -29,6 +28,10 @@
             margin: 10px;
             width: 45%; /* Each property takes 45% of the row */
             text-align: left;
+            transition: transform 2s ease-in-out; /* Transition effect for hover */
+        }
+        .property:hover {
+            transform: scale(0.5); /* Scale down the property, creating a zoom-out effect */
         }
         .property img {
             width: 100%;
